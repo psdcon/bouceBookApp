@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!-- First row -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/home_btn_pattern_entry"
+            style="@style/HomeButton"
+            android:drawableTop="@drawable/skills_icon"
+            android:onClick="onAllSkillsClick"
+            android:text="@string/home_text_all_skills" />
+
+            <!-- Pattern List -->
+        <Button
+            android:id="@+id/home_btn_my_progress"
+            style="@style/HomeButton"
+            android:drawableTop="@drawable/me_icon"
+            android:onClick="onMyProgressClick"
+            android:text="@string/home_text_my_progress" />
+
+    </LinearLayout>
+
+
+    <!-- Second row -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Tutorial -->
+        <Button
+            android:id="@+id/home_btn_skill_tree"
+            style="@style/HomeButton"
+            android:drawableTop="@drawable/tree_icon"
+            android:onClick="onSkillTreeClick"
+            android:text="@string/home_text_skill_tree" />
+
+        <!-- Pattern List -->
+        <Button
+            android:id="@+id/home_btn_tariff"
+            style="@style/HomeButton"
+            android:drawableTop="@drawable/tariff_icon"
+            android:onClick="onTariffClick"
+            android:text="@string/home_text_tariff" />
+
+    </LinearLayout>
+
+    <!-- Third row -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Msc -->
+        <Button
+            android:id="@+id/home_btn_msc"
+            style="@style/HomeButton"
+            android:drawableTop="@drawable/msc_icon"
+            android:onClick="onMscClick"
+            android:text="@string/home_text_msc" />
+
+        <!-- Video -->
+        <!-- TODO Romain: Unhide when ready -->
+        <Button
+            style="@style/HomeButton"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</LinearLayout>
