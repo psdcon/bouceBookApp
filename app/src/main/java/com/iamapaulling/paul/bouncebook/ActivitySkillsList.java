@@ -3,7 +3,7 @@ package com.iamapaulling.paul.bouncebook;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,7 +12,11 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ActivitySkillsList extends ActionBarActivity {
+/**
+ * Created by Paul on 21/01/2016.
+ */
+public class ActivitySkillsList extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,4 +71,5 @@ public class ActivitySkillsList extends ActionBarActivity {
         super.finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
+
 }

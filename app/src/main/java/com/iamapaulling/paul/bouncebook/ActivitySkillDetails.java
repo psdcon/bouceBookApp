@@ -4,16 +4,16 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
 /**
- * Created by Paul on 15/04/2015.
+ * Created by Paul on 21/01/2016.
  */
-public class ActivitySkillDetails extends ActionBarActivity {
+public class ActivitySkillDetails extends AppCompatActivity {
     String skillDatabaseIdStr;
 
     @Override

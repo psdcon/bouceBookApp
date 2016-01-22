@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="title_text">#ffffffff</color>
+    <color name="colorPrimary">#539edf</color>
+    <color name="colorPrimaryDark">#539edf</color>
+    <color name="colorAccent">#FF4081</color>
 
-    <color name="background_default_color">#80ffffff</color>
-
-    <color name="blue">#539edf</color>
 </resources>

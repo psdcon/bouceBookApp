@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Bounce Book</string>
-    
-    <string name="action_settings">Settings</string>
-    <string name="home_text_msc">Msc</string>
-    <string name="home_text_tariff">Tariff Calc</string>
-    <string name="home_text_skill_tree">Skill Tree</string>
-    <string name="home_text_my_progress">My Progress</string>
+
     <string name="home_text_all_skills">All Skills</string>
+    <string name="home_text_my_progress">My Progress</string>
+    <string name="home_text_skill_tree">Skill Tree</string>
+    <string name="home_text_tariff">Tariff Calc</string>
+    <string name="home_text_msc">Msc</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

@@ -2,21 +2,19 @@ package com.iamapaulling.paul.bouncebook;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
-public class ActivityMain extends ActionBarActivity {
+public class ActivityMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,7 +44,7 @@ public class ActivityMain extends ActionBarActivity {
         Intent listActivityIntent = new Intent(ActivityMain.this, ActivitySkillsList.class);
 //        Bundle translateBundle = ActivityOptions.makeCustomAnimation(ActivityMain.this,
 //                R.anim.slide_in_left, R.anim.slide_out_left).toBundle();
-        Bundle translateBundle = ActivityOptions.makeScaleUpAnimation(view, (int)(view.getWidth()*0.25), (int)(view.getHeight()*0.5),
+        Bundle translateBundle = ActivityOptions.makeScaleUpAnimation(view, (int) (view.getWidth() * 0.25), (int) (view.getHeight() * 0.5),
                 view.getWidth(), view.getHeight()).toBundle();
         startActivity(listActivityIntent, translateBundle);
     }
