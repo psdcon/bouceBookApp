@@ -38,7 +38,7 @@ public class ActivityTariffCalc extends AppCompatActivity {
         setContentView(R.layout.activity_tariff);
 
         // Get List of names for Spinner. Defined below
-        allSkills = Skill.getSkillsFromDatabase(this, true);
+        allSkills = Skill.getSkillsFromDatabase(this, "WHERE competition_skill=1");
         allSkills.add(0, new Skill("Select a skill..."));
 
         // Initialise view vars

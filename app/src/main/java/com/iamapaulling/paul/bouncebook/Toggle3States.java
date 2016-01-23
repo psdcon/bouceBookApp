@@ -44,16 +44,16 @@ public class Toggle3States extends ImageButton {
     private void createDrawableState() {
         switch (mState) {
             case 0:
-                setImageResource(R.drawable.me_icon);
+                setImageResource(R.drawable.tariff_btn_tuck);
                 break;
             case 1:
-                setImageResource(R.drawable.skills_icon);
+                setImageResource(R.drawable.tariff_btn_pike);
                 break;
             case 2:
-                setImageResource(R.drawable.tree_icon);
+                setImageResource(R.drawable.tariff_btn_straight);
                 break;
             default: // for disabled state -1
-                setImageResource(R.drawable.msc_icon);
+                setImageResource(R.drawable.tariff_btn_no_tuck);
                 break;
         }
     }

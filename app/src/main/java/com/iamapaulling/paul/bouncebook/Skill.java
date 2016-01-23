@@ -71,12 +71,12 @@ public class Skill {
     }
 
     // Gets skill names from the db
-    public static ArrayList<Skill> getSkillsFromDatabase(Context context, boolean competitionOnly) {
+    public static ArrayList<Skill> getSkillsFromDatabase(Context context, String whereClause) {
         // Connect to db
         SQLiteDatabase skillsDatabase = SkillsDatabaseHelper.getInstance(context).getWritableDatabase();
 
         // A Cursor provides read and write access to database results
-        Cursor cursor = skillsDatabase.rawQuery("SELECT * FROM tariff_skills ORDER BY `id` ASC", null);
+        Cursor cursor = skillsDatabase.rawQuery("SELECT * FROM tariff_skills "+ whereClause +" ORDER BY `id` ASC", null);
 
         // Move to the first row of results
         cursor.moveToFirst();
@@ -97,11 +97,6 @@ public class Skill {
                 if (!thisLevel.equals(lastLevel)) {
                     allSkills.add(new Skill(thisLevel, -1));
                     lastLevel = thisLevel;
-                }
-
-                // If we want only competition skills and this skill is not, dont add it to the list
-                if (competitionOnly && cursor.getInt(cursor.getColumnIndex("competition_skill")) == 0) {
-                    continue;
                 }
 
                 allSkills.add(new Skill(

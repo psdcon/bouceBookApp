@@ -24,7 +24,7 @@ public class ActivitySkillsList extends AppCompatActivity {
         setContentView(R.layout.activity_skills_list);
 
         // Get all skill names from db
-        final ArrayList<Skill> allSkills = Skill.getSkillsFromDatabase(this, false);
+        final ArrayList<Skill> allSkills = Skill.getSkillsFromDatabase(this, "");
 
         // Put skill names in a list view
         ArrayAdapter listAdapter = new CustomListAdapter(this, R.layout.custom_list_item, allSkills);

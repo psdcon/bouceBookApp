@@ -14,7 +14,7 @@
         <Button
             android:id="@+id/home_btn_pattern_entry"
             style="@style/HomeButton"
-            android:drawableTop="@drawable/skills_icon"
+            android:drawableTop="@drawable/home_skills"
             android:onClick="onAllSkillsClick"
             android:text="@string/home_text_all_skills" />
 
@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/home_btn_my_progress"
             style="@style/HomeButton"
-            android:drawableTop="@drawable/me_icon"
+            android:drawableTop="@drawable/home_me"
             android:onClick="onMyProgressClick"
             android:text="@string/home_text_my_progress" />
 
@@ -40,7 +40,7 @@
         <Button
             android:id="@+id/home_btn_skill_tree"
             style="@style/HomeButton"
-            android:drawableTop="@drawable/tree_icon"
+            android:drawableTop="@drawable/home_tree"
             android:onClick="onSkillTreeClick"
             android:text="@string/home_text_skill_tree" />
 
@@ -48,7 +48,7 @@
         <Button
             android:id="@+id/home_btn_tariff"
             style="@style/HomeButton"
-            android:drawableTop="@drawable/tariff_icon"
+            android:drawableTop="@drawable/home_tariff"
             android:onClick="onTariffClick"
             android:text="@string/home_text_tariff" />
 
@@ -65,7 +65,7 @@
         <Button
             android:id="@+id/home_btn_msc"
             style="@style/HomeButton"
-            android:drawableTop="@drawable/msc_icon"
+            android:drawableTop="@drawable/home_msc"
             android:onClick="onMscClick"
             android:text="@string/home_text_msc" />
 
