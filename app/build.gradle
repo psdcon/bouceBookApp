@@ -8,8 +8,8 @@ android {
         applicationId "com.iamapaulling.paul.bouncebook"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 102
+        versionName "1.02"
     }
     buildTypes {
         release {

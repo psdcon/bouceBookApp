@@ -1,9 +1,13 @@
 package com.iamapaulling.paul.bouncebook;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -137,12 +141,39 @@ public class ActivityTariffCalc extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_tariff, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
                 this.finish();
                 return true;
+            case R.id.action_settings:
+                return true;
+            case R.id.action_reset:
+                // Show confirmation box
+                new AlertDialog.Builder(this)
+                        .setTitle("Reset")
+                        .setMessage("Reset will clear all selected skills. There is no undo. Continue?")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton("Reset", new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Intent intent = getIntent();
+                                finish();
+                                overridePendingTransition(R.anim.do_not_move, R.anim.do_not_move);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                startActivity(intent);
+                            }})
+                        .setNegativeButton("Cancel", null).show();
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -152,4 +183,7 @@ public class ActivityTariffCalc extends AppCompatActivity {
         super.finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
+
+
+
 }

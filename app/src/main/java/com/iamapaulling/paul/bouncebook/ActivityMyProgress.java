@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Paul on 21/01/2016.
+ *
  */
 public class ActivityMyProgress extends AppCompatActivity{
     @Override
@@ -23,6 +24,9 @@ public class ActivityMyProgress extends AppCompatActivity{
 
         // Get all skill names from db
         final ArrayList<Skill> allSkills = Skill.getSkillsFromDatabase(this, "WHERE starred=1");
+        if (allSkills == null){
+            return;
+        }
 
         // Put skill names in a list view
         ArrayAdapter listAdapter = new CustomListAdapter(this, R.layout.custom_list_item, allSkills);
