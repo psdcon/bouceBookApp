@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 /**
  * Created by Paul on 21/01/2016.
@@ -55,7 +57,7 @@ public class ActivitySkillDetails extends AppCompatActivity {
 
 
         // Star skill
-        final CheckBox starBtn = (CheckBox) findViewById(R.id.star);
+        final ToggleButton starBtn = (ToggleButton) findViewById(R.id.trackProgress);
         starBtn.setChecked(thisSkill.starred == 1);
         starBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,15 @@ public class ActivitySkillDetails extends AppCompatActivity {
                 skillsDatabase.update("tariff_skills", cv, "id="+skillDatabaseIdStr, null);
             }
         });
+        starBtn.setOnLongClickListener(new View.OnLongClickListener() {
+               @Override
+               public boolean onLongClick(View v) {
+                   Intent intent = new Intent(getApplicationContext(), ActivityMyProgress.class);
+                   startActivity(intent);
+                   return true;
+               }
+           }
+        );
 
     }
 

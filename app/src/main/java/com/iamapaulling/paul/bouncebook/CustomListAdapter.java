@@ -21,9 +21,6 @@ public class CustomListAdapter extends ArrayAdapter<Skill> {
 
     public CustomListAdapter(Context context, int resource, ArrayList<Skill> skills) {
         super(context, resource, skills);
-        this.context = context;
-        this.resource = resource;
-        this.skills = skills;
     }
 
     @Override

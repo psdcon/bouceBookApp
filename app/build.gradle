@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.iamapaulling.paul.bouncebook"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 102
         versionName "1.02"
@@ -23,4 +23,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.github.woxthebox:draglistview:1.2.9'
 }

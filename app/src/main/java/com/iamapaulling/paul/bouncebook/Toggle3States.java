@@ -23,6 +23,10 @@ public class Toggle3States extends ImageButton {
 
     public Toggle3States(Context context, AttributeSet attrs) {
         super(context, attrs);
+
+        //Sets initial state to disabled
+        setState(-1);
+
         this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,9 +35,6 @@ public class Toggle3States extends ImageButton {
                 performFlashClick();
             }
         });
-
-        //Sets initial state
-        setState(0);
     }
 
     private void performFlashClick() {

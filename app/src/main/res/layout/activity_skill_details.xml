@@ -32,14 +32,17 @@
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <!--http://stackoverflow.com/questions/3443588/how-to-get-favorites-star-->
-                <CheckBox
-                    android:id="@+id/star"
-                    style="?android:attr/starStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ToggleButton
+                    android:id="@+id/trackProgress"
+                    android:background="@drawable/track_progress_toggle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:contentDescription="Favourite" />
+                    android:textOff=""
+                    android:textOn=""
+                    android:contentDescription="Track Progress" />
             </RelativeLayout>
 
 

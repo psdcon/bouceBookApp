@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class ActivityMain extends AppCompatActivity {
 
@@ -34,6 +35,7 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     public void onSkillTreeClick(View view) {
+        Toast.makeText(ActivityMain.this, "Nope. Nope nope nope.", Toast.LENGTH_SHORT).show();
     }
 
     public void onTariffClick(View view) {
@@ -44,6 +46,7 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     public void onMscClick(View view) {
+        Toast.makeText(ActivityMain.this, "Nope. Nope nope nope.", Toast.LENGTH_SHORT).show();
     }
     
     @Override
@@ -62,6 +65,7 @@ public class ActivityMain extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(ActivityMain.this, "Settings, lol", Toast.LENGTH_SHORT).show();
             return true;
         }
 
